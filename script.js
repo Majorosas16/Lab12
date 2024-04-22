@@ -10,7 +10,7 @@ const render =  async () => {
     for (const item of respuesta){
         
         const card= document.createElement("div");
-        card.classList.add("card")
+        card.classList.add("card");
 
         const divPersoIma= document.createElement("div");
 

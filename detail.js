@@ -10,6 +10,10 @@ const render =async () => {
     headTitle.textContent=`${personaje.displayName} Character`;
 
     const secPersonaje = document.querySelector(".Personaje");
+    Personaje.classList.add("personaje");
+
+    const card= document.createElement("div");
+    card.classList.add("card");
 
     const divPersoIma= document.createElement("div");
 
@@ -20,7 +24,8 @@ const render =async () => {
     imgPersonaje.appendChild(img);
 
     divPersoIma.appendChild(imgPersonaje);
-    secPersonaje .appendChild(divPersoIma);
+    card.appendChild(divPersoIma)
+    secPersonaje.appendChild(card);
 
     const divPersoTxt = document.createElement("div");
 
