@@ -19,6 +19,7 @@ const render =  async () => {
         img.src=item.displayIcon;
         img.alt=item.displayName;
         imgPersonaje.appendChild(img);
+        divPersoIma.classList.add("img");
 
         divPersoIma.appendChild(imgPersonaje);
         card.appendChild(divPersoIma);
@@ -44,7 +45,7 @@ const render =  async () => {
 
         const btn = document.createElement("button");
         btn.src="#";
-        btn.textContent="Ver Información detallada";
+        btn.textContent="See details";
         btn.classList.add("btn");
 
         btn.addEventListener("click", () => {
