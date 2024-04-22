@@ -6,6 +6,9 @@ const render =async () => {
 
     const personaje = await personajePorId(id);
 
+    const headTitle= document.querySelector("#headTitle");
+    headTitle.textContent=`${personaje.displayName} Character`;
+
     const secPersonaje = document.querySelector(".Personaje");
 
     const divPersoIma= document.createElement("div");

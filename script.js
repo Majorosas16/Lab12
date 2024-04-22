@@ -5,8 +5,12 @@ const render =  async () => {
     console.log(respuesta);
 
     const Personaje = document.querySelector(".Personaje");
+    Personaje.classList.add("personaje");
 
     for (const item of respuesta){
+        
+        const card= document.createElement("div");
+        card.classList.add("card")
 
         const divPersoIma= document.createElement("div");
 
@@ -17,24 +21,31 @@ const render =  async () => {
         imgPersonaje.appendChild(img);
 
         divPersoIma.appendChild(imgPersonaje);
-        Personaje.appendChild(divPersoIma);
+        card.appendChild(divPersoIma);
+        Personaje.appendChild(card);
 
         const divPersoTxt = document.createElement("div");
+        divPersoTxt.classList.add("texto");
 
         const title = document.createElement("H1");
         title.textContent=item.displayName;
+
         const subTitle= document.createElement("p");
         subTitle.textContent=item.description;
+        subTitle.classList.add("p");
 
         divPersoTxt.appendChild(title);
         divPersoTxt.appendChild(subTitle);
-        Personaje.appendChild(divPersoTxt);
+        card.appendChild(divPersoTxt);
+        Personaje.appendChild(card);
 
         const divBtnIcon = document.createElement("div");
+        divBtnIcon.classList.add("contenedorbtn");
 
         const btn = document.createElement("button");
         btn.src="#";
         btn.textContent="Ver Información detallada";
+        btn.classList.add("btn");
 
         btn.addEventListener("click", () => {
             window.location.href = `./detail.html?id=${item.uuid}`;  
@@ -42,24 +53,33 @@ const render =  async () => {
 
         divBtnIcon.appendChild(btn);
         divPersoTxt.appendChild(divBtnIcon);
-        Personaje.appendChild(divPersoTxt);
+        card.appendChild(divPersoTxt);
+        Personaje.appendChild(card);
 
 
         const basurita = document.createElement("img");
         basurita.src= "Resources/trash3.svg"
         basurita.alt= "trash";
+        basurita.classList.add("basurita")
 
-        // basurita.addEventListener("click", () => {
-        //     divBtnIcon.disabled = true;
-        //   });
-
+        
         divBtnIcon.appendChild(basurita);
         divPersoTxt.appendChild(divBtnIcon);
-        Personaje.appendChild(divPersoTxt);
+        card.appendChild(divPersoTxt);
+        Personaje.appendChild(card);
 
+     
+        // const btn2 = document.createElement("button");
+        // btn2.src="#";
+        // btn2.textContent="Ver Información detallada";  
+        
+        // divBtnIcon.appendChild(btn2);
+        // divPersoTxt.appendChild(divBtnIcon);
+        // Personaje.appendChild(divPersoTxt);
 
-
-
+        // btn2.addEventListener("click", () => {
+        //     Personaje.style.visibility = "hidden"
+        //    });
 
     }
 };
