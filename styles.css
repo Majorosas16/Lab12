@@ -86,8 +86,12 @@ body{
 
 .basurita{
     color: rgb(135, 6, 6);
-    transform: scale(1.5);
-    
+    transform: scale(1.5);   
+    transition: all 800ms ease;
+}
+
+.basurita:hover{
+    transform: scale(2);   
 }
 
 
