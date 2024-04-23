@@ -9,18 +9,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .personaje{
-    display: wrap;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .card{
     margin-top: 2rem;
-    width: 40rem;
-    height: 20rem;
+    width: 60rem;
+    height: 50rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -30,29 +33,37 @@ body{
     transition: all 800ms ease;
 }
 
-.card:hover{
-    transform: scale(1.1);
+.img{
+    width: 600px;
+    height: 600px; 
+    transition: all 800ms ease;
 }
 
-.img{
-    transition: all 800ms ease;
+.divImg{
+    width: 400px;
     border-radius: 2rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .img:hover{
     transform: scale(1.1);
-
 }
 
 .texto{
-    width: 250px; 
-    margin-left: 2rem;
+    width: 300px; 
     color: rgb(135, 6, 6);
 }
 
+.H1{
+    margin-top: 1rem;
+}
+
 .p{
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 1rem;
     color: rgb(135, 6, 6);
 }
@@ -70,8 +81,8 @@ body{
     color: aliceblue;
     background-color: rgb(135, 6, 6);
     border-radius: 2rem;
-    height: 40px;
-    width: 150px;
+    height: 50px;
+    width: 200px;
     margin-right: 1.5rem;
     cursor: pointer;
     transition: all 800ms ease;
